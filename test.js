@@ -22,7 +22,7 @@ test('vinyl-properties', function(t) {
   );
 });
 
-test('vinyl-properties with array of properties', function(t) {
+test('vinyl-properties with an array of properties', function(t) {
   t.plan(3);
 
   var stream = vinylProps(['path', 'contents'])
@@ -59,7 +59,7 @@ test('vinyl-properties with array of properties', function(t) {
   stream.end();
 });
 
-test('vinyl-properties with a string of properties', function(t) {
+test('vinyl-properties with a property string', function(t) {
   t.plan(1);
 
   vinylProps('path')
