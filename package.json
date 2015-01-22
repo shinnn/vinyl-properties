@@ -1,6 +1,6 @@
 {
   "name": "vinyl-properties",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Get vinyl file properties in a stream",
   "scripts": {
     "pretest": "jscs *.js && eslint *.js",
