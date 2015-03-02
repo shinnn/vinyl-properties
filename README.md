@@ -1,11 +1,11 @@
 # vinyl-properties
 
-[![NPM version](https://img.shields.io/npm/v/vinyl-properties.svg?style=flat)](https://www.npmjs.com/package/vinyl-properties)
+[![NPM version](https://img.shields.io/npm/v/vinyl-properties.svg)](https://www.npmjs.com/package/vinyl-properties)
 [![Build Status](https://travis-ci.org/shinnn/vinyl-properties.svg?branch=master)](https://travis-ci.org/shinnn/vinyl-properties)
 [![Build status](https://ci.appveyor.com/api/projects/status/tdyvgvtqyh5jvuvw?svg=true)](https://ci.appveyor.com/project/ShinnosukeWatanabe/vinyl-properties)
-[![Coverage Status](https://img.shields.io/coveralls/shinnn/vinyl-properties.svg?style=flat)](https://coveralls.io/r/shinnn/vinyl-properties)
-[![Dependency Status](https://img.shields.io/david/shinnn/vinyl-properties.svg?style=flat&label=deps)](https://david-dm.org/shinnn/vinyl-properties)
-[![devDependency Status](https://img.shields.io/david/dev/shinnn/vinyl-properties.svg?style=flat&label=devDeps)](https://david-dm.org/shinnn/vinyl-properties#info=devDependencies)
+[![Coverage Status](https://img.shields.io/coveralls/shinnn/vinyl-properties.svg)](https://coveralls.io/r/shinnn/vinyl-properties)
+[![Dependency Status](https://img.shields.io/david/shinnn/vinyl-properties.svg?label=deps)](https://david-dm.org/shinnn/vinyl-properties)
+[![devDependency Status](https://img.shields.io/david/dev/shinnn/vinyl-properties.svg?label=devDeps)](https://david-dm.org/shinnn/vinyl-properties#info=devDependencies)
 
 Get [vinyl file](https://github.com/wearefractal/vinyl) properties in a [stream](https://iojs.org/api/stream.html)
 
@@ -75,6 +75,6 @@ gulp.task('default', function(cb) {
 
 ## License
 
-Copyright (c) [Shinnosuke Watanabe](https://github.com/shinnn)
+Copyright (c) 2015 [Shinnosuke Watanabe](https://github.com/shinnn)
 
 Licensed under [the MIT License](./LICENSE).
