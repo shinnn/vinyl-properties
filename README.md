@@ -10,16 +10,16 @@
 Get [vinyl file](https://github.com/wearefractal/vinyl) properties in a [stream](https://iojs.org/api/stream.html)
 
 ```javascript
-var gulp = require('gulp');
-var vinylProperties = require('vinyl-properties');
+const gulp = require('gulp');
+const vinylProperties = require('vinyl-properties');
 
-gulp.task('default', function(cb) {
-  var props = vinylProperties('relative');
+gulp.task('default', () => {
+  let props = vinylProperties('relative');
 
-  gulp.src(['foo.js', 'bar.js'])
+  return gulp.src(['foo.js', 'bar.js'])
     .pipe(props)
     .pipe(gulp.dest('dist'))
-    .on('finish', function() {
+    .on('finish', () => {
       props.relative; //=> ['foo.js', 'bar.js']
     });
 });
@@ -29,7 +29,7 @@ gulp.task('default', function(cb) {
 
 [Use npm.](https://docs.npmjs.com/cli/install)
 
-```sh
+```
 npm install vinyl-properties
 ```
 
@@ -47,13 +47,13 @@ Return: `Object` ([stream.Transform](https://iojs.org/api/stream.html#stream_cla
 Every time the stream reads a [vinyl file object](https://github.com/wearefractal/vinyl#file), it pushes the value of vinyl properties you specified to the stream's properties with the same name, and pushes all of them to the `files` property.
 
 ```javascript
-gulp.task('default', function(cb) {
-  var props = vinylProperties(['path', 'contents']);
+gulp.task('default', () => {
+  let props = vinylProperties(['path', 'contents']);
 
-  gulp.src('*.txt')
+  return gulp.src('*.txt')
     .pipe(props)
     .pipe(gulp.dest('dist'))
-    .on('finish', function() {
+    .on('finish', () => {
       props.path; //=> ['file0.txt', 'file1.txt', ...]
       props.contents; //=> [<Buffer ... >, <Buffer ... >, ...]
       props.files; /*=>
