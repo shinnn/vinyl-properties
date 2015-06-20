@@ -1,6 +1,6 @@
 {
   "name": "vinyl-properties",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Get vinyl file properties in a stream",
   "scripts": {
     "pretest": "eslint --config node_modules/@shinnn/eslintrc-node/rc.json index.js test.js",
@@ -9,19 +9,11 @@
     "coveralls": "${npm_package_scripts_coverage} && istanbul-coveralls"
   },
   "repository": "shinnn/vinyl-properties",
-  "author": {
-    "name": "Shinnosuke Watanabe",
-    "url": "https://github.com/shinnn"
-  },
+  "author": "Shinnosuke Watanabe (https://github.com/shinnn)",
   "files": [
     "index.js"
   ],
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/shinnn/vinyl-properties/blob/master/LICENSE"
-    }
-  ],
+  "license": "MIT",
   "keywords": [
     "gulpfriendly",
     "gulp",
@@ -35,15 +27,15 @@
     "array"
   ],
   "dependencies": {
-    "through2": "^0.6.5"
+    "readable-stream": "^2.0.0"
   },
   "devDependencies": {
     "@shinnn/eslintrc-node": "^1.0.2",
-    "eslint": "^0.20.0",
-    "istanbul": "^0.3.13",
-    "istanbul-coveralls": "^1.0.2",
-    "tap-spec": "^3.0.0",
+    "eslint": "^0.23.0",
+    "istanbul": "^0.3.15",
+    "istanbul-coveralls": "^1.0.3",
+    "tap-spec": "^4.0.0",
     "tape": "^4.0.0",
-    "vinyl": "^0.4.6"
+    "vinyl": "^0.5.0"
   }
 }

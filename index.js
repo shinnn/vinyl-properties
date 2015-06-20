@@ -4,7 +4,7 @@
 */
 'use strict';
 
-var through = require('through2');
+var Transform = require('readable-stream').Transform;
 
 module.exports = function vinylProperties(props) {
   if (!Array.isArray(props)) {
@@ -21,18 +21,21 @@ module.exports = function vinylProperties(props) {
 
   var propsCount = props.length;
 
-  var stream = through.obj(function(file, enc, cb) {
-    var len = propsCount;
-    var fileProps = {};
+  var stream = new Transform({
+    objectMode: true,
+    transform: function(file, enc, cb) {
+      var len = propsCount;
+      var fileProps = {};
 
-    while (len--) {
-      var propName = [props[len]];
-      stream[propName].push(file[propName]);
-      fileProps[propName] = file[propName];
+      while (len--) {
+        var propName = [props[len]];
+        stream[propName].push(file[propName]);
+        fileProps[propName] = file[propName];
+      }
+
+      stream.files.push(fileProps);
+      cb(null, file);
     }
-
-    stream.files.push(fileProps);
-    cb(null, file);
   });
 
   stream.files = [];
