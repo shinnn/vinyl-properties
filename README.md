@@ -36,7 +36,7 @@ npm install vinyl-properties
 ## API
 
 ```javascript
-var vinylProperties = require('vinyl-properties');
+const vinylProperties = require('vinyl-properties');
 ```
 
 ### vinylProperties(*properties*)
@@ -44,7 +44,7 @@ var vinylProperties = require('vinyl-properties');
 *properties*: `String` or `Array` of `String` (the names of properties you want to collect)  
 Return: `Object` ([stream.Transform](https://iojs.org/api/stream.html#stream_class_stream_transform))
 
-Every time the stream reads a [vinyl file object](https://github.com/wearefractal/vinyl#file), it pushes the value of vinyl properties you specified to the stream's properties with the same name, and pushes all of them to the `files` property.
+Every time the stream reads a [vinyl file object](https://github.com/wearefractal/vinyl#file), it pushes the value of vinyl properties you specified to the stream's properties in the same names, and pushes all of them to the `files` property.
 
 ```javascript
 gulp.task('default', () => {
