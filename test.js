@@ -1,31 +1,31 @@
-'use strict';
+'use strong';
 
-var vinylProps = require('./');
-var File = require('vinyl');
-var test = require('tape');
+const vinylProps = require('./');
+const File = require('vinyl');
+const test = require('tape');
 
-test('vinyl-properties', function(t) {
+test('vinyl-properties', t => {
   t.plan(3);
 
   t.equal(vinylProps.name, 'vinylProperties', 'should have a function name.');
 
   t.throws(
-    vinylProps.bind(null, 123),
+    () => vinylProps(123),
     /TypeError.*must be a string or an array\./,
     'should throw a type error when the argument is neither string nor array.'
   );
 
   t.throws(
-    vinylProps.bind(null, ['a', ['b'], 123]),
+    () => vinylProps(['a', ['b'], 123]),
     /TypeError.*must be a string\./,
     'should throw a type error when the array contains non-string items.'
   );
 });
 
-test('vinyl-properties with an array of properties', function(t) {
+test('vinyl-properties with an array of properties', t => {
   t.plan(3);
 
-  var stream = vinylProps(['path', 'contents'])
+  const stream = vinylProps(['path', 'contents'])
   .on('finish', function() {
     t.deepEqual(
       this.contents,
@@ -59,7 +59,7 @@ test('vinyl-properties with an array of properties', function(t) {
   stream.end();
 });
 
-test('vinyl-properties with a property string', function(t) {
+test('vinyl-properties with a property string', t => {
   t.plan(1);
 
   vinylProps('path')

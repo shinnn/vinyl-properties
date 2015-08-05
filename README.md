@@ -7,14 +7,14 @@
 [![Dependency Status](https://img.shields.io/david/shinnn/vinyl-properties.svg?label=deps)](https://david-dm.org/shinnn/vinyl-properties)
 [![devDependency Status](https://img.shields.io/david/dev/shinnn/vinyl-properties.svg?label=devDeps)](https://david-dm.org/shinnn/vinyl-properties#info=devDependencies)
 
-Get [vinyl file](https://github.com/wearefractal/vinyl) properties in a [stream](https://iojs.org/api/stream.html)
+Collect [vinyl file](https://github.com/wearefractal/vinyl) properties in a [stream](https://nodejs.org/api/stream.html)
 
 ```javascript
 const gulp = require('gulp');
 const vinylProperties = require('vinyl-properties');
 
 gulp.task('default', () => {
-  let props = vinylProperties('relative');
+  const props = vinylProperties('relative');
 
   return gulp.src(['foo.js', 'bar.js'])
     .pipe(props)
@@ -48,7 +48,7 @@ Every time the stream reads a [vinyl file object](https://github.com/wearefracta
 
 ```javascript
 gulp.task('default', () => {
-  let props = vinylProperties(['path', 'contents']);
+  const props = vinylProperties(['path', 'contents']);
 
   return gulp.src('*.txt')
     .pipe(props)

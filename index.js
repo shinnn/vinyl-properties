@@ -4,13 +4,13 @@
 */
 'use strict';
 
-var Transform = require('readable-stream').Transform;
+const Transform = require('stream').Transform;
 
 module.exports = function vinylProperties(props) {
   if (!Array.isArray(props)) {
     if (typeof props !== 'string') {
       throw new TypeError(
-        props +
+        String(props) +
         ' is neither string nor array. ' +
         'The first argument to vinyl-properties must be a string or an array.'
       );
@@ -19,16 +19,16 @@ module.exports = function vinylProperties(props) {
     props = [props];
   }
 
-  var propsCount = props.length;
+  const propsCount = props.length;
 
-  var stream = new Transform({
+  const stream = new Transform({
     objectMode: true,
-    transform: function(file, enc, cb) {
-      var len = propsCount;
-      var fileProps = {};
+    transform: function collectVinylPropertiesTransform(file, enc, cb) {
+      let len = propsCount;
+      const fileProps = {};
 
       while (len--) {
-        var propName = [props[len]];
+        const propName = [props[len]];
         stream[propName].push(file[propName]);
         fileProps[propName] = file[propName];
       }
@@ -40,12 +40,12 @@ module.exports = function vinylProperties(props) {
 
   stream.files = [];
 
-  var propsLen = propsCount;
+  let propsLen = propsCount;
 
   while (propsLen--) {
     if (typeof props[propsLen] !== 'string') {
       throw new TypeError(
-        props[propsLen] +
+        String(props[propsLen]) +
         ' is not a string. ' +
         'Every array item in the first argument to vinyl-properties must be a string.'
       );
