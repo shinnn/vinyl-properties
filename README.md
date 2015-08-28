@@ -7,7 +7,7 @@
 [![Dependency Status](https://img.shields.io/david/shinnn/vinyl-properties.svg?label=deps)](https://david-dm.org/shinnn/vinyl-properties)
 [![devDependency Status](https://img.shields.io/david/dev/shinnn/vinyl-properties.svg?label=devDeps)](https://david-dm.org/shinnn/vinyl-properties#info=devDependencies)
 
-Collect [vinyl file](https://github.com/wearefractal/vinyl) properties in a [stream](https://nodejs.org/api/stream.html)
+Collect [vinyl file](https://github.com/gulpjs/vinyl) properties in a [stream](https://nodejs.org/api/stream.html)
 
 ```javascript
 const gulp = require('gulp');
@@ -42,9 +42,9 @@ const vinylProperties = require('vinyl-properties');
 ### vinylProperties(*properties*)
 
 *properties*: `String` or `Array` of `String` (the names of properties you want to collect)  
-Return: `Object` ([stream.Transform](https://iojs.org/api/stream.html#stream_class_stream_transform))
+Return: `Object` ([stream.Transform](https://nodejs.org/api/stream.html#stream_class_stream_transform))
 
-Every time the stream reads a [vinyl file object](https://github.com/wearefractal/vinyl#file), it pushes the value of vinyl properties you specified to the stream's properties in the same names, and pushes all of them to the `files` property.
+Every time the stream reads a [vinyl file object](https://github.com/gulpjs/vinyl#file), it pushes the value of vinyl properties you specified to the stream's properties in the same names, and pushes all of them to the `files` property.
 
 ```javascript
 gulp.task('default', () => {
