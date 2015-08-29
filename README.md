@@ -4,8 +4,7 @@
 [![Build Status](https://travis-ci.org/shinnn/vinyl-properties.svg?branch=master)](https://travis-ci.org/shinnn/vinyl-properties)
 [![Build status](https://ci.appveyor.com/api/projects/status/tdyvgvtqyh5jvuvw?svg=true)](https://ci.appveyor.com/project/ShinnosukeWatanabe/vinyl-properties)
 [![Coverage Status](https://img.shields.io/coveralls/shinnn/vinyl-properties.svg)](https://coveralls.io/r/shinnn/vinyl-properties)
-[![Dependency Status](https://img.shields.io/david/shinnn/vinyl-properties.svg?label=deps)](https://david-dm.org/shinnn/vinyl-properties)
-[![devDependency Status](https://img.shields.io/david/dev/shinnn/vinyl-properties.svg?label=devDeps)](https://david-dm.org/shinnn/vinyl-properties#info=devDependencies)
+[![devDependency Status](https://david-dm.org/shinnn/vinyl-properties/dev-status.svg)](https://david-dm.org/shinnn/vinyl-properties#info=devDependencies)
 
 Collect [vinyl file](https://github.com/gulpjs/vinyl) properties in a [stream](https://nodejs.org/api/stream.html)
 
