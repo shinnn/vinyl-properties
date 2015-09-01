@@ -2,7 +2,6 @@
 
 [![NPM version](https://img.shields.io/npm/v/vinyl-properties.svg)](https://www.npmjs.com/package/vinyl-properties)
 [![Build Status](https://travis-ci.org/shinnn/vinyl-properties.svg?branch=master)](https://travis-ci.org/shinnn/vinyl-properties)
-[![Build status](https://ci.appveyor.com/api/projects/status/tdyvgvtqyh5jvuvw?svg=true)](https://ci.appveyor.com/project/ShinnosukeWatanabe/vinyl-properties)
 [![Coverage Status](https://img.shields.io/coveralls/shinnn/vinyl-properties.svg)](https://coveralls.io/r/shinnn/vinyl-properties)
 [![devDependency Status](https://david-dm.org/shinnn/vinyl-properties/dev-status.svg)](https://david-dm.org/shinnn/vinyl-properties#info=devDependencies)
 
